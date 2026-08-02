@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DET Dictation Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="topbar" aria-label="App status">
+      <div>
+        <p class="eyebrow">Duolingo English Test</p>
+        <h1>Dictation Trainer</h1>
+      </div>
+      <div class="stats" aria-live="polite">
+        <span id="sentenceCount">0 sentences</span>
+        <span id="roundCount">0 tried</span>
+      </div>
+    </section>
+
+    <section class="trainer" aria-label="Dictation practice">
+      <div class="controls">
+        <button id="newSentenceBtn" type="button">New sentence</button>
+        <button id="playBtn" type="button">Play again <span id="playsLeft">(2 left)</span></button>
+      </div>
+
+      <label class="answer-label" for="answerInput">Your dictation</label>
+      <textarea id="answerInput" rows="4" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Listen and type the sentence here."></textarea>
+
+      <div class="actions">
+        <button id="checkBtn" type="button">Check answer</button>
+        <button id="revealBtn" type="button">Reveal</button>
+      </div>
+
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+    <section class="settings" aria-label="Voice settings">
+      <label for="voiceSelect">Voice</label>
+      <select id="voiceSelect"></select>
+      <label class="checkbox">
+        <input id="randomVoiceToggle" type="checkbox" checked>
+        Random English voice each sentence
+      </label>
+    </section>
+
+    <section class="missed" aria-label="Today's missed sentences">
+      <div class="section-title">
+        <h2>Today's review</h2>
+        <button id="clearReviewBtn" type="button">Clear</button>
+      </div>
+      <div id="missedList" class="missed-list">
+        <p class="empty">Missed sentences will appear here after you check an answer.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
