@@ -1,6 +1,8 @@
 const state = {
   sentences: [],
   current: "",
+  currentVoice: null,
+  started: false,
   tries: 0,
   playsLeft: 2,
   missed: [],
@@ -10,7 +12,8 @@ const state = {
 const els = {
   sentenceCount: document.querySelector("#sentenceCount"),
   roundCount: document.querySelector("#roundCount"),
-  newSentenceBtn: document.querySelector("#newSentenceBtn"),
+  startBtn: document.querySelector("#startBtn"),
+  nextSentenceBtn: document.querySelector("#nextSentenceBtn"),
   playBtn: document.querySelector("#playBtn"),
   playsLeft: document.querySelector("#playsLeft"),
   answerInput: document.querySelector("#answerInput"),
@@ -33,19 +36,36 @@ async function loadSentences() {
       .map((line) => line.trim())
       .filter((line) => line && !line.startsWith("#"));
     updateStats();
-    pickNewSentence();
+    setPracticeEnabled(true);
+    setWaitingToStart();
   } catch (error) {
-    els.result.innerHTML = `<p class="result-line"><span class="wrong">sentences.txt를 불러오지 못했습니다.</span> GitHub Pages에 올린 뒤 접속하거나, 같은 폴더에서 간단한 로컬 서버로 열어주세요.</p>`;
+    els.result.innerHTML = `<p class="result-line"><span class="wrong">Could not load sentences.txt.</span> Please open the GitHub Pages site after uploading all files.</p>`;
     setPracticeEnabled(false);
   }
 }
 
 function setPracticeEnabled(enabled) {
-  els.newSentenceBtn.disabled = !enabled;
-  els.playBtn.disabled = !enabled;
-  els.checkBtn.disabled = !enabled;
-  els.revealBtn.disabled = !enabled;
-  els.answerInput.disabled = !enabled;
+  els.startBtn.disabled = !enabled;
+  els.nextSentenceBtn.disabled = true;
+  els.playBtn.disabled = true;
+  els.checkBtn.disabled = true;
+  els.revealBtn.disabled = true;
+  els.answerInput.disabled = true;
+}
+
+function setWaitingToStart() {
+  state.current = "";
+  state.currentVoice = null;
+  state.started = false;
+  els.startBtn.hidden = false;
+  els.nextSentenceBtn.disabled = true;
+  els.playBtn.disabled = true;
+  els.checkBtn.disabled = true;
+  els.revealBtn.disabled = true;
+  els.answerInput.disabled = true;
+  els.answerInput.value = "";
+  els.result.innerHTML = `<p class="result-line">Press Start when you are ready.</p>`;
+  updatePlayButton();
 }
 
 function loadVoices() {
@@ -62,7 +82,7 @@ function loadVoices() {
   });
 }
 
-function getSelectedVoice() {
+function chooseVoiceForSentence() {
   if (state.voices.length === 0) return null;
   if (els.randomVoiceToggle.checked) {
     return state.voices[Math.floor(Math.random() * state.voices.length)];
@@ -70,9 +90,9 @@ function getSelectedVoice() {
   return state.voices[Number(els.voiceSelect.value)] || state.voices[0];
 }
 
-function speak(text) {
+function speak(text, voiceOverride = state.currentVoice) {
   if (!("speechSynthesis" in window)) {
-    els.result.innerHTML = `<p class="result-line"><span class="wrong">이 브라우저는 TTS를 지원하지 않습니다.</span></p>`;
+    els.result.innerHTML = `<p class="result-line"><span class="wrong">This browser does not support TTS.</span></p>`;
     return;
   }
 
@@ -81,9 +101,19 @@ function speak(text) {
   utterance.lang = "en-US";
   utterance.rate = 0.88;
   utterance.pitch = 1;
-  const voice = getSelectedVoice();
-  if (voice) utterance.voice = voice;
+  if (voiceOverride) utterance.voice = voiceOverride;
   window.speechSynthesis.speak(utterance);
+}
+
+function startPractice() {
+  if (state.sentences.length === 0) return;
+  state.started = true;
+  els.startBtn.hidden = true;
+  els.nextSentenceBtn.disabled = false;
+  els.checkBtn.disabled = false;
+  els.revealBtn.disabled = false;
+  els.answerInput.disabled = false;
+  pickNewSentence();
 }
 
 function pickNewSentence() {
@@ -94,9 +124,14 @@ function pickNewSentence() {
 
   const next = state.sentences[Math.floor(Math.random() * state.sentences.length)];
   state.current = next;
+  state.currentVoice = chooseVoiceForSentence();
   state.playsLeft = 2;
   els.answerInput.value = "";
   els.result.innerHTML = "";
+  els.answerInput.disabled = false;
+  els.checkBtn.disabled = false;
+  els.revealBtn.disabled = false;
+  els.nextSentenceBtn.disabled = false;
   els.answerInput.focus();
   updatePlayButton();
   speak(next);
@@ -111,7 +146,7 @@ function playAgain() {
 
 function updatePlayButton() {
   els.playsLeft.textContent = `(${state.playsLeft} left)`;
-  els.playBtn.disabled = state.playsLeft <= 0 || !state.current;
+  els.playBtn.disabled = state.playsLeft <= 0 || !state.current || !state.started;
 }
 
 function normalizeForCompare(text) {
@@ -201,7 +236,7 @@ function checkAnswer() {
       <p class="result-line"><span class="tag">Correct</span>${diff.answerHtml}</p>
       <p class="result-line"><span class="tag">Yours</span>${diff.inputHtml || '<strong class="wrong">(blank)</strong>'}</p>
     `;
-    addMissed(state.current, input);
+    addMissed(state.current, input, state.currentVoice);
   }
 
   updateStats();
@@ -212,8 +247,8 @@ function revealAnswer() {
   els.result.innerHTML = `<p class="result-line"><span class="tag">Answer</span>${escapeHtml(state.current)}</p>`;
 }
 
-function addMissed(answer, input) {
-  state.missed.unshift({ answer, input });
+function addMissed(answer, input, voice) {
+  state.missed.unshift({ answer, input, voice });
   renderMissed();
 }
 
@@ -247,7 +282,8 @@ function updateStats() {
   els.roundCount.textContent = `${state.tries} tried`;
 }
 
-els.newSentenceBtn.addEventListener("click", pickNewSentence);
+els.startBtn.addEventListener("click", startPractice);
+els.nextSentenceBtn.addEventListener("click", pickNewSentence);
 els.playBtn.addEventListener("click", playAgain);
 els.checkBtn.addEventListener("click", checkAnswer);
 els.revealBtn.addEventListener("click", revealAnswer);
@@ -256,7 +292,9 @@ els.missedList.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-index]");
   if (!button) return;
   const item = state.missed[Number(button.dataset.index)];
-  if (item) speak(item.answer);
+  if (item) {
+    speak(item.answer, item.voice || state.currentVoice || chooseVoiceForSentence());
+  }
 });
 
 window.speechSynthesis?.addEventListener("voiceschanged", loadVoices);
