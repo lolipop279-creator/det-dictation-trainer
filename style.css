@@ -60,7 +60,6 @@ button:disabled {
 .topbar,
 .trainer,
 .settings,
-.sentence-check,
 .missed {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -152,14 +151,12 @@ select:focus {
 }
 
 #revealBtn,
-#toggleCheckBtn,
 #clearReviewBtn {
   background: #ece9df;
   color: var(--ink);
 }
 
 #revealBtn:hover,
-#toggleCheckBtn:hover,
 #clearReviewBtn:hover {
   background: #dfdbcf;
 }
@@ -223,41 +220,6 @@ select {
   display: flex;
   gap: 8px;
   grid-column: 2;
-}
-
-.sentence-check {
-  margin-top: 16px;
-  padding: 22px;
-}
-
-.check-summary {
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-.check-list {
-  display: grid;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.check-item {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 12px;
-}
-
-.check-meta {
-  color: var(--bad);
-  font-size: 0.86rem;
-  font-weight: 800;
-  margin-bottom: 6px;
-}
-
-.check-text {
-  line-height: 1.55;
-  margin: 0;
-  word-break: break-word;
 }
 
 .missed {

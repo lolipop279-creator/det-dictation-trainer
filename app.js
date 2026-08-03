@@ -22,9 +22,6 @@ const els = {
   result: document.querySelector("#result"),
   voiceSelect: document.querySelector("#voiceSelect"),
   randomVoiceToggle: document.querySelector("#randomVoiceToggle"),
-  toggleCheckBtn: document.querySelector("#toggleCheckBtn"),
-  checkSummary: document.querySelector("#checkSummary"),
-  checkList: document.querySelector("#checkList"),
   missedList: document.querySelector("#missedList"),
   clearReviewBtn: document.querySelector("#clearReviewBtn"),
 };
@@ -39,7 +36,6 @@ async function loadSentences() {
       .map((line) => line.trim())
       .filter((line) => line && !line.startsWith("#"));
     updateStats();
-    renderSentenceCheck();
     setPracticeEnabled(true);
     setWaitingToStart();
   } catch (error) {
@@ -278,49 +274,6 @@ function renderMissed() {
   });
 }
 
-function inspectSentence(sentence, index, seen) {
-  const issues = [];
-  const words = sentence.split(/\s+/).filter(Boolean);
-  const normalized = normalizeForCompare(sentence);
-
-  if (words.length < 5) issues.push("too short");
-  if (words.length > 28) issues.push("too long");
-  if (!/[.!?]$/.test(sentence)) issues.push("no ending punctuation");
-  if (/^[a-z]/.test(sentence)) issues.push("starts lowercase");
-  if (/^\d+[\).\s-]/.test(sentence)) issues.push("starts with a number");
-  if (/^[;:)]|[;:(]$/.test(sentence)) issues.push("edge punctuation");
-  if (/^(and|but|or|so|because|although|while|when|if|that|which|who|where|with|without|for|to|of|in|on|at|by)\b/i.test(sentence)) {
-    issues.push("may start mid-sentence");
-  }
-  if (seen.has(normalized)) issues.push("duplicate");
-  seen.add(normalized);
-
-  return issues.length ? { index: index + 1, sentence, issues } : null;
-}
-
-function renderSentenceCheck() {
-  const seen = new Set();
-  const items = state.sentences
-    .map((sentence, index) => inspectSentence(sentence, index, seen))
-    .filter(Boolean);
-
-  if (items.length === 0) {
-    els.checkSummary.textContent = `No obvious issues found in ${state.sentences.length} sentences.`;
-    els.checkList.innerHTML = "";
-    return;
-  }
-
-  els.checkSummary.textContent = `${items.length} suspicious lines found out of ${state.sentences.length} sentences.`;
-  els.checkList.innerHTML = items
-    .map((item) => `
-      <article class="check-item">
-        <div class="check-meta">Line ${item.index}: ${item.issues.join(", ")}</div>
-        <p class="check-text">${escapeHtml(item.sentence)}</p>
-      </article>
-    `)
-    .join("");
-}
-
 function clearReview() {
   state.missed = [];
   renderMissed();
@@ -337,11 +290,6 @@ els.playBtn.addEventListener("click", playAgain);
 els.checkBtn.addEventListener("click", checkAnswer);
 els.revealBtn.addEventListener("click", revealAnswer);
 els.clearReviewBtn.addEventListener("click", clearReview);
-els.toggleCheckBtn.addEventListener("click", () => {
-  const shouldShow = els.checkList.hidden;
-  els.checkList.hidden = !shouldShow;
-  els.toggleCheckBtn.textContent = shouldShow ? "Hide" : "Show";
-});
 els.missedList.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-index]");
   if (!button) return;
