@@ -97,12 +97,14 @@ function speak(text, voiceOverride = state.currentVoice) {
   }
 
   window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "en-US";
-  utterance.rate = 0.88;
-  utterance.pitch = 1;
-  if (voiceOverride) utterance.voice = voiceOverride;
-  window.speechSynthesis.speak(utterance);
+  window.setTimeout(() => {
+    const utterance = new SpeechSynthesisUtterance(` ${text}`);
+    utterance.lang = "en-US";
+    utterance.rate = 0.88;
+    utterance.pitch = 1;
+    if (voiceOverride) utterance.voice = voiceOverride;
+    window.speechSynthesis.speak(utterance);
+  }, 250);
 }
 
 function startPractice() {
