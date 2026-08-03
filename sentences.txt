@@ -37,8 +37,6 @@ Governments have the power to create systems for everyone.
 Therefore, governments can improve public transport in many places.
 However, I specifically mention cities because large cities such as New York, Los Angeles, and Seoul are always busy and crowded.
 Some cities were planned decades ago, while others were not.
-There is only limited space to build more roads, and even if more roads are built, they will soon become congested again because of the large number of vehicles.
-Therefore, building more roads is not the best way to reduce traffic problems in large cities.
 Instead, improving public transport is a better solution because it allows people to travel to work, school, and other places more easily.
 On the other hand, in small cities, is improving public transport really the best solution?
 As I mentioned earlier, improving a public transport system requires a huge amount of money.
@@ -88,11 +86,10 @@ Playing is very important while children are growing up.
 They can learn many things while playing with others.
 They experience emotions such as happiness, sadness and anger while interacting with their friends.
 They also learn how to get along with children of their own age.
-Looking back on my own childhood, I spent most of my free time with my friends between the ages of ten and twenty-four, and those experiences helped me develop important social skills.
 Overall, I believe that both spending time with family and playing with friends are important for children's development.
 Maintaining a good balance between the two is the key because children learn different lessons from family members, older people, younger people and friends.
 Both approaches have their merits, but I am firmly of the view that working in an office is generally preferable for both employees and employers.
-The rise of home working during the COVID-19 pandemic demonstrated that many jobs can be carried out remotely with the help of modern technology
+The rise of home working during the COVID-19 pandemic demonstrated that many jobs can be carried out remotely with the help of modern technology.
 For employees, the most obvious advantage is the elimination of commuting, which can save a considerable amount of time and improve overall quality of life.
 That said, remote working is not without its shortcomings.
 While online communication is convenient, it often lacks the spontaneity and personal connection that come from face-to-face interaction.
@@ -172,8 +169,8 @@ Whenever my son fell on the floor or cut his fingers or knees, I blamed myself b
 However, there was a moment when I completely changed my mind. 
 It was the first day he started running. 
 I was surprised because he ran without fear. 
-I asked him, "Are you afraid of falling down?"
-He replied, "I already fell down a lot." 
+I asked him, "Are you afraid of falling down?".
+He replied, "I already fell down a lot.".
 After hearing that, I felt embarrassed and realised that I should let him try things freely, even if he failed sometimes. 
 It also reminded me of my childhood. 
 My mother was very protective, so she never sent me to a supermarket alone. 
@@ -223,7 +220,7 @@ Overall, both views are correct.
 However, I do not believe that hard work, luck, or personal connections alone guarantee success. 
 Life is not that simple. Human destiny can be complicated, and sometimes there are things we cannot fully understand or control. 
 Therefore, even if you fail, you should not give up.
-You put "black" in front of a word, even a good word,
+You put "black" in front of a word, even a good word.
 It makes it worse, That's messed up, right?
 Like "mail." I love getting mail. Blackmail? CRIME.
 Market, I love going to the market. Black market? CRIME.
@@ -231,8 +228,8 @@ Ice, put it in my drink. Black ice? very dangerous ice.
 Hole? I can deal with a hole, Black hole? That's the most dangerous hole in the universe.
 There's no reason to single out the hole.
 They could've just called it "space hole" We would've figured it out from the context clues.
-a bunch of racist scientists got together like, "Ah, shit, What are we going to call that thing?" 
-The lecture was canceled due to unexpected weather conditions.
+a bunch of racist scientists got together like, "Ah, shit, What are we going to call that thing?".
+The lecture was cancelled due to unexpected weather conditions.
 She forgot to submit the assignment before the deadline.
 Many students prefer studying in quiet environments.
 The professor explained the concept with several practical examples.
@@ -342,8 +339,206 @@ I’m trying not to worry too much about things I can’t control.
 The course is challenging, but it gives you plenty of opportunities to practise.
 I wasn’t sure what to expect, but the experience turned out to be really enjoyable.
 Let me know if anything changes, and I’ll adjust my plans accordingly.
-
-
+I didn’t mean to sound rude; I was just trying to explain why I disagreed.
+It’s hard to stay focused when there are so many things happening at once
+She told me she would let us know as soon as she had made up her mind.
+I’ve been thinking about taking a short trip once things calm down a bit.
+We should probably discuss this in more detail before making a final decision.
+I was halfway through the book when I realised I had already read it years ago.
+Could you check whether the attachment opens properly on your computer?
+He seemed disappointed, but he tried not to show it in front of everyone.
+I usually set an alarm, just in case I fall asleep without noticing the time.
+The room was much smaller than it looked in the photos online.
+I’m trying to get into the habit of reviewing new vocabulary every evening.
+She said she had never expected the interview to be that difficult.
+We arrived early so that we would have enough time to find our seats.
+I don’t think I would have noticed the mistake if you hadn’t pointed it out.
+The coffee was too hot to drink, so I left it on the table for a few minutes.
+I was planning to go for a walk, but it started raining just as I was leaving.
+He has a way of explaining complicated ideas in a very simple and practical way.
+I’d like to hear your opinion before we decide what to do next.
+It took a lot of effort, but the result was definitely worth it.
+She was looking for a quiet place where she could study without being interrupted.
+I’m not sure if this is the right time to bring it up, but we need to talk about it.
+We had to wait outside for nearly twenty minutes because the doors hadn’t opened yet.
+I’ve realised that I learn more effectively when I practise a little every day.
+The manager asked us to prepare a short summary of what we had discussed.
+I forgot where I had put my glasses, and I spent ages looking for them.
+She sounded much more relaxed once she knew everything had gone well.
+I don’t want to rush you, but we do need an answer by tomorrow morning.
+The city feels completely different at night, especially near the river.
+I was surprised to find out that we had several friends in common.
+Could you tell me how long it usually takes to get there by train?
+He’s been saving money for months so he can move into his own flat.
+I didn’t have time to eat breakfast, so I picked up a sandwich on the way.
+She kept checking her phone because she was waiting for an important message.
+I think we should focus on solving the main problem first.
+The presentation went better than I expected, although I was nervous at the beginning.
+I’ve always found it difficult to explain my thoughts clearly in another language.
+He asked if I could recommend a good place to have dinner nearby.
+We need to make sure everyone understands the plan before we move forward.
+I was so tired that I could hardly keep my eyes open during the film.
+She offered to lend me her notes because I had missed the previous class.
+I’m trying to be more patient with myself when I make mistakes.
+The website wouldn’t load properly, so I refreshed the page a few times.
+He didn’t say much, but I could tell he was paying close attention.
+I’d rather finish this now than have to worry about it tomorrow.
+We were walking towards the station when we suddenly heard someone calling our names.
+I don’t know exactly when I’ll arrive, but I’ll message you when I’m close.
+She explained that she had been too busy to reply earlier.
+The weather forecast said it might snow, but it turned out to be sunny.
+I’ve been meaning to ask you about the book you mentioned last week.
+We had a long conversation about how much the neighbourhood had changed.
+I accidentally sent the message before I had finished writing it.
+He looked relieved when he realised the meeting had been cancelled.
+I’m not very familiar with this area, so I might need directions.
+She was careful not to mention anything that might upset him.
+The more we practise, the easier it becomes to notice small differences in pronunciation.
+I don’t mind waiting a little longer if it means we can get a better table.
+We were told to bring comfortable shoes because there would be a lot of walking
+I wanted to say something, but I couldn’t think of the right words.
+He suggested meeting earlier so that we wouldn’t have to rush.
+I’ve noticed that I feel more productive when I start the day with a clear plan.
+She was disappointed that she couldn’t attend the concert after all.
+I didn’t realise the shop closed so early on Sundays.
+We spent most of the evening talking about our plans for the future.
+I’m going to check the timetable before deciding which train to take.
+He promised he would call me back as soon as he got home.
+The question was more difficult than it seemed at first.
+I’m trying to avoid checking my phone every few minutes.
+She said the view from the top of the hill was absolutely beautiful.
+I was in such a hurry that I forgot to lock the front door.
+We should leave some extra time in case there’s a delay on the way.
+I don’t think I’ve ever seen him look so excited before.
+She has been working really hard, and it’s starting to show.
+I’d appreciate your feedback once you’ve had time to think about it.
+The room was quiet except for the sound of rain against the window.
+I was about to send you a message when you called me.
+He didn’t understand the instructions, so he asked someone to explain them again.
+We decided not to order dessert because we were already full.
+I’ve been trying to pay more attention to how native speakers use intonation.
+She looked as though she wanted to say something but changed her mind.
+I need to organise my schedule before I can agree to anything.
+The museum was larger than we expected, so we didn’t manage to see everything.
+I don’t want to make a promise that I might not be able to keep.
+He explained why the project had taken longer than originally planned.
+I was hoping you could help me understand this part of the article.
+She left early because she had an appointment on the other side of town.
+We need to check whether the information is still up to date.
+I’m finding it easier to speak now that I’m less afraid of making mistakes.
+The restaurant was fully booked, so we had to eat somewhere else.
+He seemed confused at first, but then he realised what I meant.
+I was pleased to hear that you had enjoyed the course.
+She asked me to remind her about the meeting if she forgot.
+I don’t usually stay out late during the week.
+We’re trying to reduce the amount of waste we produce at home.
+I had no idea that learning a language could be this enjoyable.
+He looked around the room as if he was searching for someone.
+I’m not sure how useful this will be, but it’s worth a try.
+She was so focused on her work that she didn’t hear me come in.
+The traffic was worse than usual because there had been an accident.
+I’ve been trying to listen more carefully instead of preparing my answer too early.
+We should talk about this again once everyone has had time to think.
+I didn’t expect him to remember such a small detail from our conversation.
+She wanted to improve her pronunciation, so she started recording herself every day.
+I’m not saying it will be easy, but I think we can manage it.
+The bus was so crowded that I had to stand all the way home.
+I was wondering whether you had any advice for someone just starting out.
+He forgot to save the file, so he had to start the work all over again.
+We need to be honest about what is working and what needs to change.
+She seemed happy with the result, even though it wasn’t perfect.
+I’m trying to spend more time doing things that actually matter to me.
+The teacher encouraged us to guess the meaning from context.
+I didn’t recognise her at first because she had changed her hairstyle.
+He said he would rather stay in than go out in this weather.
+We had planned to visit the gallery, but it was closed for renovation.
+I should probably write this down before I forget it.
+She gave a clear explanation of how the system was supposed to work.
+I’m not used to hearing my own voice in recordings.
+The problem is that we don’t have enough time to test everything properly.
+He was trying to be helpful, but his advice made me more confused.
+I’ve been looking for an app that can help me track my progress.
+We stopped at a small café because we needed somewhere warm to sit.
+I was surprised by how natural the conversation felt after the first few minutes.
+She didn’t want to complain, but the service was really slow.
+I think this expression sounds more natural in casual conversation.
+He asked me if I had seen the email he sent the night before.
+We were advised to arrive at least fifteen minutes before the appointment.
+I’m trying to find a balance between studying hard and getting enough rest.
+The hotel staff were friendly and helped us with our luggage.
+I didn’t know whether to laugh or apologise, so I just stood there awkwardly.
+She reminded everyone to turn off their microphones during the call.
+I’d like to make sure we’re talking about the same thing.
+The lights went out while I was in the middle of cooking dinner.
+He has been learning English for years, but he still finds listening quite challenging.
+I didn’t have much confidence at first, but I improved little by little.
+We need to decide who is responsible for each part of the task.
+She looked tired, but she insisted that she was fine.
+I was going through some old photos when I found this one.
+The app is useful, but it sometimes gives translations that sound unnatural.
+He told us not to worry because everything was under control.
+I’ve always wanted to visit a place where I could see the northern lights.
+We didn’t realise how far the station was from the hotel.
+I’m trying to speak more slowly so that I can pronounce each word clearly.
+She had already left by the time I arrived at the office.
+I don’t think this sentence would sound natural in everyday conversation.
+He looked embarrassed when he noticed everyone was staring at him.
+We had to cancel the trip because something unexpected came up.
+I’d rather ask for help than waste hours trying to figure it out alone.
+The film was based on a true story, which made it even more moving.
+She asked whether I preferred tea or coffee, and I said either was fine.
+I’ve been working on improving my listening skills by watching interviews.
+We should probably keep the explanation simple so that everyone can understand it.
+I didn’t realise how cold it was until I stepped outside.
+He was late because he had taken the wrong bus by mistake.
+I’m interested in learning expressions that native speakers actually use.
+She managed to stay calm even though the situation was stressful.
+The book was so engaging that I finished it in just two days.
+I think we need to approach the problem from a different perspective.
+He apologised for not replying sooner and explained that he had been busy.
+We had dinner at a small restaurant that a friend had recommended.
+I’m trying to remember to check my spelling before sending messages.
+She couldn’t stop laughing when she heard what had happened.
+The instructions were written clearly, so I didn’t have any trouble following them.
+I was hoping to get some work done, but I kept getting distracted.
+He asked if there was anything he could do to make things easier.
+We spent more money than we had planned, but we had a great time.
+I didn’t want to argue, so I decided to let it go.
+She was worried that she might have misunderstood the directions.
+The class was challenging, but it helped me notice weaknesses I hadn’t seen before.
+I’m trying to make my sentences sound more natural and less translated.
+He seemed proud of himself when he finally solved the problem.
+We were asked to share one thing we had learned during the session.
+I didn’t expect the answer to be quite so complicated.
+She has a talent for making people feel comfortable in difficult situations.
+I need to check my notes before I can answer that properly.
+The train was cancelled, so we had no choice but to take a taxi.
+I’ve been thinking about what you said, and I think you were right.
+He wanted to buy the jacket, but it was more expensive than he expected.
+We need to make the instructions clearer for people who are using this for the first time.
+I was nervous about speaking, but everyone was much kinder than I expected.
+She said she would send the updated version after lunch.
+I don’t usually make plans that far in advance.
+The smell of fresh bread made the whole kitchen feel warm and cosy.
+I’m trying to learn phrases in context rather than memorising single words.
+He didn’t realise he was speaking too quickly until someone asked him to slow down.
+We waited for a while, but nobody came to answer the door.
+I’d like to practise this again until it feels more natural.
+She was pleased with how much progress she had made in such a short time.
+The café was busy, but we managed to find a table near the window.
+I think it’s important to review mistakes without being too hard on yourself.
+He explained the rule, but I still didn’t fully understand how to use it.
+We were hoping for good weather, but it rained almost the entire weekend.
+I’m trying to notice the difference between what I think I hear and what is actually said.
+She didn’t seem surprised, as if she had already expected it to happen.
+The deadline is getting close, so we need to make some decisions soon.
+I forgot to bring my notebook, so I had to take notes on my phone.
+He seemed more confident after practising the speech several times.
+We decided to take a different route because the main road was closed.
+I didn’t know the word, but I could guess the meaning from the sentence.
+She asked me to speak up because she couldn’t hear me clearly.
+I’m trying to use English more naturally in small everyday situations.
+Let’s go over the main points once more before we finish.
 
 
 

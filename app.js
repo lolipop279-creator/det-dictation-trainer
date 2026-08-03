@@ -216,7 +216,7 @@ function diffWords(answer, userInput) {
   return {
     isCorrect: normalizeForCompare(answer) === normalizeForCompare(userInput),
     answerHtml: renderMarkedWords(answerMarked, "wrong"),
-    inputHtml: renderMarkedWords(inputMarked, "wrong"),
+    inputHtml: renderMarkedWords(inputMarked, "mistyped"),
   };
 }
 
@@ -288,7 +288,7 @@ function inspectSentence(sentence, index, seen) {
   if (!/[.!?]$/.test(sentence)) issues.push("no ending punctuation");
   if (/^[a-z]/.test(sentence)) issues.push("starts lowercase");
   if (/^\d+[\).\s-]/.test(sentence)) issues.push("starts with a number");
-  if (/^[,;:)]|[,;:(]$/.test(sentence)) issues.push("edge punctuation");
+  if (/^[;:)]|[;:(]$/.test(sentence)) issues.push("edge punctuation");
   if (/^(and|but|or|so|because|although|while|when|if|that|which|who|where|with|without|for|to|of|in|on|at|by)\b/i.test(sentence)) {
     issues.push("may start mid-sentence");
   }

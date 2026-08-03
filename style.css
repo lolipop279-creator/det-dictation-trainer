@@ -8,6 +8,7 @@
   --accent: #176b87;
   --accent-strong: #0f4d61;
   --bad: #c62828;
+  --mistyped: #1565c0;
   --good: #1b7f4c;
   --shadow: 0 18px 45px rgba(23, 23, 23, 0.08);
 }
@@ -186,6 +187,11 @@ select:focus {
 
 .wrong {
   color: var(--bad);
+  font-weight: 900;
+}
+
+.mistyped {
+  color: var(--mistyped);
   font-weight: 900;
 }
 
