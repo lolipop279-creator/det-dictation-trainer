@@ -104,7 +104,7 @@ function speak(text, voiceOverride = state.currentVoice) {
     utterance.pitch = 1;
     if (voiceOverride) utterance.voice = voiceOverride;
     window.speechSynthesis.speak(utterance);
-  }, 250);
+  }, 500);
 }
 
 function startPractice() {
