@@ -7,6 +7,8 @@ const state = {
   playsLeft: 2,
   missed: [],
   voices: [],
+  speechTimer: null,
+  primerTimer: null,
 };
 
 const els = {
@@ -96,15 +98,46 @@ function speak(text, voiceOverride = state.currentVoice) {
     return;
   }
 
+  if (state.speechTimer) {
+    window.clearTimeout(state.speechTimer);
+    state.speechTimer = null;
+  }
+  if (state.primerTimer) {
+    window.clearTimeout(state.primerTimer);
+    state.primerTimer = null;
+  }
+
   window.speechSynthesis.cancel();
-  window.setTimeout(() => {
-    const utterance = new SpeechSynthesisUtterance(` ${text}`);
+  const speakMainText = () => {
+    if (state.speechTimer) {
+      window.clearTimeout(state.speechTimer);
+      state.speechTimer = null;
+    }
+    if (state.primerTimer) {
+      window.clearTimeout(state.primerTimer);
+      state.primerTimer = null;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "en-US";
     utterance.rate = 0.88;
     utterance.pitch = 1;
     if (voiceOverride) utterance.voice = voiceOverride;
     window.speechSynthesis.speak(utterance);
-  }, 500);
+  };
+
+  const primer = new SpeechSynthesisUtterance(".");
+  primer.lang = "en-US";
+  primer.rate = 1;
+  primer.pitch = 1;
+  primer.volume = 0;
+  if (voiceOverride) primer.voice = voiceOverride;
+  primer.onend = speakMainText;
+
+  state.speechTimer = window.setTimeout(speakMainText, 450);
+  state.primerTimer = window.setTimeout(() => {
+    window.speechSynthesis.speak(primer);
+  }, 120);
 }
 
 function startPractice() {
